@@ -24,13 +24,29 @@ Skrypt:
 - klonuje repozytorium do katalogu `zerotier-config`,
 - tworzy plik `.env` z numerami sieci ZeroTier (zdefiniowanymi w skrypcie),
 - przygotowuje katalog `config/` do mapowania jako volume,
-- umożliwia natychmiastowe uruchomienie kontenera.
+- domyślnie uruchamia kontener Docker przy użyciu `docker compose up -d`.
 
 ---
 
-## 🐳 Uruchomienie kontenera
+## ⚙️ Opcje skryptu
 
-Po zakończeniu działania skryptu, przejdź do katalogu `zerotier-config` i uruchom kontener:
+### Uruchomienie z automatycznym startem kontenera (domyślnie)
+
+```bash
+./clone_and_configure_zerotier.sh
+```
+
+### Tylko pobranie repozytorium (bez uruchamiania kontenera)
+
+```bash
+./clone_and_configure_zerotier.sh --only-clone
+```
+
+---
+
+## 🐳 Uruchomienie kontenera ręcznie
+
+Jeśli użyłeś `--only-clone`, przejdź do katalogu i uruchom kontener ręcznie:
 
 ```bash
 cd zerotier-config
