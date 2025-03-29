@@ -97,3 +97,19 @@ zerotier-config/
 ## 📄 Licencja
 
 Projekt dostępny na licencji MIT.
+
+
+---
+
+## ⚡ Alternatywny szybki start (jedna linia)
+
+Jeśli nie chcesz pobierać skryptu, możesz sklonować repozytorium, utworzyć plik `.env` i uruchomić kontener jednym poleceniem:
+
+```bash
+git clone https://github.com/komputeros/zerotier-one-docker-compose.git zerotier-config \
+&& cd zerotier-config \
+&& echo "ZEROTIER_NETWORK_ID=abcdefdeadbeef00" > .env \
+&& docker compose up -d
+```
+
+Możesz oczywiście zmienić `ZEROTIER_NETWORK_ID` na własny identyfikator sieci (lub kilka ID rozdzielonych spacją).
